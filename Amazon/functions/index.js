@@ -9,7 +9,7 @@ const stripe = require("stripe")(process.env.SECRET_KEY);
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: true }));
 app.use(express.json());
 
 app.get("/", (request, response) => response.status(200).send("hello world"));
