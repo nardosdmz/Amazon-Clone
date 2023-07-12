@@ -48,7 +48,7 @@ app.post("/payments/create", async (request, response) => {
 // 		console.log(error.message);
 // 	}
 // });
-const port = process.env.PORT || 10000;
+const port = 5000;
 
 app.listen(port, (err) => {
 	if (err) {
