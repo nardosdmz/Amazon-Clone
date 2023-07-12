@@ -1,3 +1,4 @@
+const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -49,7 +50,6 @@ app.post("/payments/create", async (request, response) => {
 // });
 const port = process.env.PORT || 10000;
 
-// functions.https.onRequest(app);
 app.listen(port, (err) => {
 	if (err) {
 		console.log(err.message);
@@ -57,5 +57,6 @@ app.listen(port, (err) => {
 		console.log(`http://localhost:${port}`);
 	}
 });
+exports.api = functions.https.onRequest(app);
 
 // http://127.0.0.1:5001/fir-1a184/us-central1/api
