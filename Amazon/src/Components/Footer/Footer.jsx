@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import "../../assets/bootstrap.css";
+// import "../../assets/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.css";
 import flag from "../../assets/image/us-flag.jpg";
 import { Link } from "react-router-dom";
 
