@@ -1,4 +1,4 @@
-const functions = require("firebase-functions");
+// const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -48,15 +48,14 @@ app.post("/payments/create", async (request, response) => {
 // 		console.log(error.message);
 // 	}
 // });
-const port = 5000;
 
-app.listen(port, (err) => {
+app.listen(10000, (err) => {
 	if (err) {
 		console.log(err.message);
 	} else {
-		console.log(`http://localhost:${port}`);
+		console.log(`http://localhost:10000`);
 	}
 });
-exports.api = functions.https.onRequest(app);
+// exports.api = functions.https.onRequest(app);
 
 // http://127.0.0.1:5001/fir-1a184/us-central1/api
