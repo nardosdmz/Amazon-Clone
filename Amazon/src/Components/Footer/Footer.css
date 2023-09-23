@@ -1,15 +1,16 @@
 .Footer {
 	font-size: 14px;
 	background-color: #232f3e;
+	width: 100%;
+	/* max-width: 400px; */
 }
 
-.Footer ul {
+.Footer li {
 	list-style-type: none;
 }
-
 .Footer a,
 .Footer__lang {
-	color: #dddddd;
+	color: #ddd;
 	text-decoration: none;
 }
 
@@ -34,8 +35,8 @@
 .Footer__lang select {
 	background-color: #232f3e;
 	color: #dddddd;
-	font-size: 16px;
-	padding: 6px;
+	font-size: 15px;
+	/* padding: 6px; */
 }
 
 .Footer__lang select option {
@@ -45,6 +46,7 @@
 .Footer__wrapper h6 {
 	color: white;
 }
+
 .backToTop a {
 	text-align: center;
 }
@@ -54,9 +56,13 @@
 	object-fit: contain;
 	margin: 0 20px;
 }
-.lang {
-	margin-left: 6rem;
-}
+
 .flag {
 	width: 20px;
+}
+
+@media screen and (max-width: 593px) {
+	.Footer {
+		width: 593px;
+	}
 }

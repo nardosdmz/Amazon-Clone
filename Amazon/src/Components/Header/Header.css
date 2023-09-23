@@ -5,6 +5,7 @@
 	background-color: #131921;
 	position: sticky;
 	top: 0;
+
 	z-index: 100;
 }
 .header__logo {
@@ -15,12 +16,15 @@
 }
 
 .header__searchIcon {
-	padding: 5px;
-	height: 22px !important;
+	/* padding: 5px; */
+	height: 32px !important;
 	background-color: #cd9042;
 	border-radius: 0 3px 3px 0;
+	border: none;
 }
-
+.header__searchIcon:hover {
+	cursor: pointer;
+}
 .header__search {
 	display: flex;
 	flex: 1;
@@ -31,7 +35,7 @@
 .header__searchInput {
 	height: 11px;
 	padding: 11px;
-	border-radius: 3px 0 0 3px;
+	/* border-radius: 0px 0 0 3px; */
 	border: none;
 	width: 100%;
 }
@@ -47,6 +51,9 @@
 	justify-content: space-evenly;
 }
 
+.hov:hover {
+	border: 1px solid rgb(223, 220, 220);
+}
 .header__optionLineOne {
 	font-size: 10px;
 }
@@ -62,15 +69,46 @@
 	color: white;
 }
 .header__basketCount {
-	margin-left: 10px;
+	/* margin-left: 10px; */
 	margin-right: 10px;
+	color: #cd9042;
 }
 .header__clearlink {
 	text-decoration: none;
 }
 .header__deliveryAddress {
 	color: white;
+	text-decoration: none;
 }
 .header__lang {
 	font-size: bold;
+}
+#navbarScrollingDropdown {
+	background-color: #e7e7e7;
+	height: 32px;
+	border-radius: 3px 0 0 3px;
+	padding: 5px;
+	font-size: 14px;
+	border-right: 1px solid rgb(174, 174, 174);
+}
+#navbarScrollingDropdown:hover {
+	background-color: #cacaca;
+}
+#navbarScrollingDropdown:active {
+	border-color: #ec9e4f;
+}
+
+@media screen and (max-width: 713px) {
+	.header {
+		height: 65px;
+	}
+	.flag {
+		margin-left: 5px;
+	}
+}
+@media screen and (min-width: 862px) {
+	.header {
+		display: contents;
+		/* width: 700px ; */
+	}
 }

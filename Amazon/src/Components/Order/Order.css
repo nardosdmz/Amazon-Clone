@@ -16,3 +16,9 @@
 	font-weight: 500;
 	text-align: right;
 }
+
+@media (max-width: 691px) {
+	.order{
+		width: fit-content;
+	}
+}

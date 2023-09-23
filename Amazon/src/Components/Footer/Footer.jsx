@@ -4,6 +4,7 @@ import "./Footer.css";
 import "bootstrap/dist/css/bootstrap.css";
 import flag from "../../assets/image/us-flag.jpg";
 import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 
 function Footer() {
 	const LinkItems = [
@@ -71,51 +72,61 @@ function Footer() {
 
 	return (
 		<>
-			<div className="Footer">
-				<div className="backToTop d-flex justify-content-center ">
-					<a className="text-center text-white my-3" href="#">
+			<div className="Footer ">
+				<a className="backToTop d-flex justify-content-center " href="#">
+					<a className="text-center text-white my-3" href="/">
 						Back to top
 					</a>
+				</a>
+				<div fluid className="Footer__wrapper ">
+					<Row className="mx-5 px-5 my-3">
+						{LinkItems.map((item, i) => (
+							<Col xs={3} sm={6} md={3} lg key={i}>
+								<h6 className="mt-4 mb-3 ">{item.title}</h6>
+								{item.items.map((links, LinksIndex) => (
+									<li key={LinksIndex} className="mb-2 me-5 ">
+										<Link to={links.linkUrl}>{links.linkName}</Link>
+									</li>
+								))}
+							</Col>
+						))}
+					</Row>
 				</div>
-				<div className="Footer__wrapper container d-flex">
-					{LinkItems.map((item, i) => (
-						<ul key={i} className="col col-md">
-							<h6 className="mt-4 mb-3">{item.title}</h6>
-							{item.items.map((links, LinksIndex) => (
-								<li key={LinksIndex} className="mb-2">
-									<Link to={links.linkUrl}>{links.linkName}</Link>
-								</li>
-							))}
-						</ul>
-					))}
-				</div>
-				<div className="Footer__lang mt-4 me-5 text-center d-flex justify-content-center">
-					<Link to="#">
+				<div style={{ border: "1px solid #3A4553" }}></div>
+				<div className="Footer__lang   text-center d-flex justify-content-center">
+					<a href="#">
 						<img
-							className="footer__logo pt-3"
+							className="footer__logo pt-3 mt-4 me-5"
 							src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
 							alt=""
 						/>
-					</Link>
-					<div className="d-flex lang">
-						<select onChange="">
-							<option value="en ">🌐︎ English</option>
-							<option value="es">Spanish</option>
-						</select>
-						<div className="border border-secondary ms-3 p-2 mx-2  ">
-							<span>
-								<img className="flag" src={flag} alt="USA Flag" />{" "}
-							</span>
-							<Link>
-								<span className=""> United States</span>
-							</Link>
+					</a>
+
+					<Row className="d-flex ms-4 mt-4 lang">
+						<div
+							className=" col-xs-6
+						 col-sm-6 col-md-6"
+						>
+							<select className="mb-3 p-2 mt-1">
+								<option value="en">🌐︎ English</option>
+								<option value="es">Spanish</option>
+							</select>
 						</div>
-					</div>
+						<div className="col-xs-6 col-sm-6 p-1 col-md-6  mt-2 ">
+							<div className="">
+								<Link className="py-2 border border-secondary">
+									<img className="flag ps-1 " src={flag} alt="px-1 Flag" />{" "}
+									<span className="me-1"> United States</span>
+								</Link>
+							</div>
+						</div>
+					</Row>
 				</div>
+
+				
 				<br />
-				<br />
-				<center className="build_by">
-					<div className="fs-4">Build By: Nardos Moges</div>
+				<center className="build_by pb-3">
+					<div className="fs-4 ">Build By: Nardos Moges</div>
 				</center>
 			</div>
 		</>

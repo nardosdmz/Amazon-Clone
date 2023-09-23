@@ -6,6 +6,7 @@ import {
 	createUserWithEmailAndPassword,
 } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
+import { Button, Form, FormControl } from "react-bootstrap";
 
 function Login() {
 	const navigate = useNavigate();
@@ -38,7 +39,7 @@ function Login() {
 	};
 
 	return (
-		<div className="login">
+		<div className="login ">
 			<Link to="/">
 				<img
 					className="login__logo"
@@ -48,33 +49,56 @@ function Login() {
 			<div className="login__container">
 				<h1>Sign-in</h1>
 
-				<form>
-					<h5>E-mail</h5>
-					<input
+				<Form>
+					<Form.Group controlId="exampleForm.ControlInput1">
+						<Form.Label>Email</Form.Label>
+						<FormControl
+							type="text"
+							value={email}
+							
+							onChange={(e) => setEmail(e.target.value)}
+						/>
+					</Form.Group>
+					{/* <h5>E-mail</h5> */}
+					{/* <input
 						type="text"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
-					/>
-
-					<h5>Password</h5>
-					<input
+					/> */}
+					<Form.Group controlId="exampleForm.ControlTextarea1">
+						<Form.Label>Password</Form.Label>
+						<FormControl
+							type="password"
+							value={password}
+							onChange={(e) => setPassword(e.target.value)}
+						/>
+					</Form.Group>
+					{/* <Button
+						type="submit"
+						onClick={signIn}
+						className="login__signInButton "
+					>
+						Sign In
+					</Button> */}
+					{/* <h5>Password</h5> */}
+					{/* <input
 						type="password"
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
-					/>
-
+					/> */}
 					<button
 						type="submit"
 						onClick={signIn}
-						className="login__signInButton"
+						className="login__signInButton mt-3"
 					>
 						Sign In
 					</button>
-				</form>
+				</Form>
 
 				<p>
-					By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use &
-					Sale. Please see our Privacy Notice, our Cookies Notice and our
+					By signing-in you agree to the AMAZON FAKE CLONE{" "}
+					<a href=" ">Conditions of Use </a> & <a href="">Sale</a> . Please see
+					our <a href="">Privacy Notice</a>, our Cookies Notice and our
 					Interest-Based Ads Notice.
 				</p>
 
