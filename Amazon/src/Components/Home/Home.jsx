@@ -11,9 +11,8 @@ function Home() {
 				<div className="home">
 					<div className="home__container">
 						<HomeCarousel />
-
+						<div className="banner__fadeBottom"></div>
 						<div className="home__row">
-							
 							<Product
 								id="12321341"
 								title="INSIGNIA All-New 50-inch Class F30 Series LED 4K UHD Smart Fire TV (NS-50F301NA24, 2023 Model)"

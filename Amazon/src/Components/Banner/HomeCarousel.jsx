@@ -6,13 +6,15 @@ import Gaming from "../../assets/image/Gaming.jpg";
 import Beauty from "../../assets/image/Beauty.jpg";
 import Toys from "../../assets/image/Toys.jpg";
 import Prime from "../../assets/image/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_ (1).jpg";
+import "./Banner.css"
 
 function HomeCarousel() {
 	return (
 		<>
 			<div className="carousel-container">
-				<Carousel fade={true} pause={false} indicators={false} className="thanks">
+				<Carousel fade={true} pause={false} indicators={false} >
 					<Carousel.Item interval={4000}>
+						
 						<img
 							className="home__image d-block w-100"
 							src={Prime}
@@ -57,6 +59,7 @@ function HomeCarousel() {
 						/>
 					</Carousel.Item>
 				</Carousel>
+				
 			</div>
 		</>
 	);

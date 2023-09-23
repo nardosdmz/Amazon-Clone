@@ -1,4 +1,9 @@
-img{
-    width: 100%;
+img {
+	width: 100%;
 }
 
+@media (max-width: 603px) {
+	.carousel-container {
+		width: 592px;
+	}
+}
