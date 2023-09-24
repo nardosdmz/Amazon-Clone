@@ -4,7 +4,7 @@
     font-size: 14px;
     padding-top: 42px;
     font-weight:500;
-   
+	margin: -86px;
 }
 .new-to-amazon{
     font-size: 12px;
@@ -19,7 +19,6 @@
 	margin-top: 9px;
 	border-color: #a88734 #9c7e31 #846a29;
     font-weight: 500;
-    
 }
 
 .start__here{
