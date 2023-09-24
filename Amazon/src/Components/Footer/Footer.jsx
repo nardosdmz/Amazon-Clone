@@ -123,10 +123,9 @@ function Footer() {
 					</Row>
 				</div>
 
-				
 				<br />
 				<center className="build_by pb-3">
-					<div className="fs-4 ">Build By: Nardos Moges</div>
+					<div className="fs-4 ">Built by: Nardos Moges</div>
 				</center>
 			</div>
 		</>

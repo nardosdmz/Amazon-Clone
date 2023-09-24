@@ -29,9 +29,15 @@
 	text-decoration: none;
 }
 .build_by {
-	color: #ecb500;
+	color: #ffc505e0;
+	font-style: italic;
+	
 }
+.build_by:hover {
+	color: rgb(222, 174, 2);
+	text-shadow: 2px 2px 4px rgb(237, 74, 24);
 
+}
 .Footer__lang select {
 	background-color: #232f3e;
 	color: #dddddd;

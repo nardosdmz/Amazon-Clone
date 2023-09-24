@@ -47,15 +47,14 @@ function Login() {
 				/>
 			</Link>
 			<div className="login__container">
-				<h1>Sign-in</h1>
+				<h1>Sign in</h1>
 
 				<Form>
 					<Form.Group controlId="exampleForm.ControlInput1">
-						<Form.Label>Email</Form.Label>
+						<Form.Label className="fw-email-pass">Email</Form.Label>
 						<FormControl
 							type="text"
 							value={email}
-							
 							onChange={(e) => setEmail(e.target.value)}
 						/>
 					</Form.Group>
@@ -66,7 +65,7 @@ function Login() {
 						onChange={(e) => setEmail(e.target.value)}
 					/> */}
 					<Form.Group controlId="exampleForm.ControlTextarea1">
-						<Form.Label>Password</Form.Label>
+						<Form.Label className="fw-email-pass">Password</Form.Label>
 						<FormControl
 							type="password"
 							value={password}
@@ -101,6 +100,12 @@ function Login() {
 					our <a href="">Privacy Notice</a>, our Cookies Notice and our
 					Interest-Based Ads Notice.
 				</p>
+
+				<div class="line-container">
+					<hr class="line" />
+					<span class="line-text">New to Amazon?</span>
+					<hr class="line" />
+				</div>
 
 				<button onClick={register} className="login__registerButton">
 					Create your Amazon Account

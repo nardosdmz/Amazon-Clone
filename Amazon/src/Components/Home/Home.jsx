@@ -3,6 +3,7 @@ import "./Home.css";
 import Product from "../Product/Product";
 import HomeCarousel from "../Banner/HomeCarousel";
 import { Container } from "react-bootstrap";
+import NewCustomer from "../NewCustomer/NewCustomer";
 
 function Home() {
 	return (
@@ -113,6 +114,7 @@ MIATONE Outdoor Portable Bluetooth Wireless Speaker Waterproof - Grey"
 						</div>
 					</div>
 				</div>
+				<NewCustomer/>
 			</Container>
 		</>
 	);

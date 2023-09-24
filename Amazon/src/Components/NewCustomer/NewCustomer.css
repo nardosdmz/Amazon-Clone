@@ -1,0 +1,30 @@
+.New__customer {
+	border-top: 1px solid #d6d6d6; 
+	border-bottom: 1px solid #b1b1b1;
+    font-size: 14px;
+    padding-top: 42px;
+    font-weight:500;
+   
+}
+.new-to-amazon{
+    font-size: 12px;
+}
+.login__button {
+      background: linear-gradient(to bottom, #ffe194, #eda73e);
+	background-color: #f0c14b;
+	border-radius: 4px;
+	width: 42%;
+	height: 30px;
+	border: 1px solid ;
+	margin-top: 9px;
+	border-color: #a88734 #9c7e31 #846a29;
+    font-weight: 500;
+    
+}
+
+.start__here{
+    text-decoration: none;
+}
+.start__here:hover{
+    color: #c99002;
+}
